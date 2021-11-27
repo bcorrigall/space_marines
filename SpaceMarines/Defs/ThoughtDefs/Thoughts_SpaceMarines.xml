@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>BattleScars</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Disfigured</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>battle scars</label>
+        <baseOpinionOffset>+15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyBattleBrotherDied</defName>
+    <stages>
+      <li>
+        <label>my brother {0} died</label>
+        <description>My battle brother died. We had been through so much...</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyBattleSisterDied</defName>
+    <stages>
+      <li>
+        <label>my sister {0} died</label>
+        <description>My battle sister died. We had been through so much...</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

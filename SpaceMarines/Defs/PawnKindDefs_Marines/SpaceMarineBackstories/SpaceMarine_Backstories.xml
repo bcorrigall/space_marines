@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>		
+  <!--===================== Space Marine Neophytes =====================-->
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineSweatshopTransformation</defName>
+		<title>Urban Neophyte</title>
+		<titleShort>Neophyte</titleShort>
+		<baseDescription>[PAWN_nameDef] was a sweatshop worker on an urbworld planet before being recruited as a Space Marine neophyte.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>RangedScoutMarineBackstory</li>
+		  <li>ScoutMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>AssaultMarineBackstory</li>
+		  <li>TechMarineBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>25</chance>
+			</li>
+		</forcedTraits>
+		<forcedHediffs>
+		  <li>GeneSeedSecondHeart</li>
+		  <li>GeneSeedIronHeart</li>
+		  <li>GeneSeedForgeOfStrength</li>
+		  <li>GeneSeedBloodMaker</li>
+		  <li>GeneSeedHealer</li>
+		  <li>GeneSeedUnsleeping</li>
+		  <li>GeneSeedNeutralizer</li>
+		  <li>GeneSeedRemembrancer</li>
+		  <li>GeneSeedMultiLung</li>
+		  <li>GeneSeedEyeOfVengeance</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedHibernator</li>
+		  <li>GeneSeedSkinshield</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedDevourerer</li>
+		  <li>GeneSeedWeaver</li>
+		  <li>GeneSeedPoisonBite</li>
+		  <li>GeneSeedBlackCarapace</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>16</min>
+			<max>30</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>16</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineJungleTransformation</defName>
+		<title>Jungle Neophyte</title>
+		<titleShort>Neophyte</titleShort>
+		<baseDescription>[PAWN_nameDef] was born in the middle of a vast and extremely dangerous jungle. [PAWN_pronoun] was accepted as a neophyte when a squad of Space Marines found [PAWN_objective] beating a crocodile to death with [PAWN_possessive] bare hands.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>RangedScoutMarineBackstory</li>
+		  <li>ScoutMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>AssaultMarineBackstory</li>
+		  <li>TechMarineBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Animals</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Social</defName>
+			<amount>-2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>25</chance>
+			</li>
+		</forcedTraits>
+		<forcedHediffs>
+		  <li>GeneSeedSecondHeart</li>
+		  <li>GeneSeedIronHeart</li>
+		  <li>GeneSeedForgeOfStrength</li>
+		  <li>GeneSeedBloodMaker</li>
+		  <li>GeneSeedHealer</li>
+		  <li>GeneSeedUnsleeping</li>
+		  <li>GeneSeedNeutralizer</li>
+		  <li>GeneSeedRemembrancer</li>
+		  <li>GeneSeedMultiLung</li>
+		  <li>GeneSeedEyeOfVengeance</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedHibernator</li>
+		  <li>GeneSeedSkinshield</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedDevourerer</li>
+		  <li>GeneSeedWeaver</li>
+		  <li>GeneSeedPoisonBite</li>
+		  <li>GeneSeedBlackCarapace</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>16</min>
+			<max>30</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>18</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineVolcanoTransformation</defName>
+		<title>Volcano Neophyte</title>
+		<titleShort>Neophyte</titleShort>
+		<baseDescription>[PAWN_nameDef] grew up calling the sides of an active volcano [PAWN_possessive] home. Space Marines found [PAWN_objective] trying to save [PAWN_possessive] family from a lava flow. They took [PAWN_objective] away kicking and screaming, and [PAWN_nameDef] was inducted into the ranks of the neophytes once [PAWN_possessive] burns were healed.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>RangedScoutMarineBackstory</li>
+		  <li>ScoutMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>AssaultMarineBackstory</li>
+		  <li>TechMarineBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Abrasive</defName>
+				<chance>30</chance>
+			</li>
+		</forcedTraits>
+		<disallowedTraits>
+			<li>
+				<defName>Kind</defName>
+				<chance>75</chance>
+			</li>
+		</disallowedTraits>
+		<forcedHediffs>
+		  <li>GeneSeedSecondHeart</li>
+		  <li>GeneSeedIronHeart</li>
+		  <li>GeneSeedForgeOfStrength</li>
+		  <li>GeneSeedBloodMaker</li>
+		  <li>GeneSeedHealer</li>
+		  <li>GeneSeedUnsleeping</li>
+		  <li>GeneSeedNeutralizer</li>
+		  <li>GeneSeedRemembrancer</li>
+		  <li>GeneSeedMultiLung</li>
+		  <li>GeneSeedEyeOfVengeance</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedHibernator</li>
+		  <li>GeneSeedSkinshield</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedPurifier</li>
+		  <li>GeneSeedDevourerer</li>
+		  <li>GeneSeedWeaver</li>
+		  <li>GeneSeedPoisonBite</li>
+		  <li>GeneSeedBlackCarapace</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>16</min>
+			<max>30</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>16</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+
+	
+	  <!--===================== Tactical Marine =====================-->
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineTactical1</defName>
+		<title>Tactical Space Marine</title>
+		<titleShort>Tactical Marine</titleShort>
+		<baseDescription>After conquering the hardships of [PAWN_possessive] genetic mutations, [PAWN_nameDef] proved worthy of becoming a tactical marine.</baseDescription>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>25</min>
+			<max>200</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineTactical2</defName>
+		<title>Sniper Marine</title>
+		<titleShort>Sniper Marine</titleShort>
+		<baseDescription>[PAWN_nameDef] was an excellent marksman with all forms of weaponry, and was well respected - or envied - by all of [PAWN_possessive] peers. [PAWN_pronoun] was given all jobs that involved a careful eye and patience.</baseDescription>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>RangedScoutMarineBackstory</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+	    <forcedTraits>
+			<li>
+				<defName>ShootingAccuracy</defName>
+				<degree>1</degree>
+			</li>
+		</forcedTraits>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>10</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>25</min>
+			<max>1000</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineTactical3</defName>
+		<title>Heroic Space Marine</title>
+		<titleShort>Space Marine</titleShort>
+		<baseDescription>[PAWN_nameDef] lost an eye in one of the greatest battles [PAWN_possessive] chapter had ever known. [PAWN_possessive] legend grew from there, along with [PAWN_possessive] list of injuries and augmetics. </baseDescription>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>AssaultMarineBackstory</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+	    <forcedTraits>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>0.8</chance>
+			</li>
+		</forcedTraits>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>6</amount>
+		  </li>
+		</skillGains>
+		<forcedHediffs>
+			  <li>BionicEye</li>
+			  <li>BionicLeg</li>
+			  <li>BionicEar</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>300</min>
+			<max>1000</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	  <!--===================== Scout Marine =====================-->
+	
+	<AlienRace.BackstoryDef>
+		<defName>ScoutMarine1</defName>
+		<title>Scout Marine</title>
+		<titleShort>Scout Marine</titleShort>
+		<baseDescription>After recieving all [PAWN_possessive] implants, [PAWN_nameDef] was placed into a scout marine squad.</baseDescription>
+		<spawnCategories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>ScoutMarineBackstory</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>18</min>
+			<max>70</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	  <!--===================== TechMarine =====================-->
+	
+	<AlienRace.BackstoryDef>
+		<defName>TechMarine1</defName>
+		<title>TechMarine</title>
+		<titleShort>TechMarine</titleShort>
+		<baseDescription>After recieving all [PAWN_possessive] implants, [PAWN_nameDef] was trained to become a TechMarine.</baseDescription>
+		<spawnCategories>
+		  <li>TechMarineBackstory</li>
+		  <li>SpaceMarineBackstory</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>200</min>
+			<max>1000</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+</Defs>	

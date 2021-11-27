@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordCut</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_inf(p=4)->tear</li>
+        <li>damaged_inf->bite</li>
+        <li>damaged_inf->chop</li>
+        <li>damaged_inf->gore</li>
+        <li>damaged_inf(deflected!=True)->gash</li>
+
+        <li>damaged_past(p=4)->tearing</li>
+        <li>damaged_past->bit</li>
+        <li>damaged_past->chopped</li>
+        <li>damaged_past->gored</li>
+        <li>damaged_past(deflected!=True)->torn</li>
+
+        <li>damaged_present->cutting</li>
+        <li>damaged_present->sawing</li>
+        <li>damaged_present(deflected!=True)->ripping</li>
+        <li>damaged_present(deflected!=True)->tearing</li>
+        <li>damaged_present(deflected!=True)->eviscerating</li>
+
+        <li>woundname->wound</li>
+        <li>woundname(p=0.3)->opening</li>
+        <li>flavortext_consequence(recipient_flesh==Mechanoid)->exposing the machinery underneath</li>
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->leaving a gory [woundname]</li>
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->leaving grisly tears in the skin</li>
+        <li>flavortext_consequence(recipient_flesh==Mechanoid)->leaving grisly tears in the metal</li>
+
+        <li>destroyed_past->sawed</li>
+        <li>destroyed_past->ripped</li>
+        <li>destroyed_past->halved</li>
+        <li>destroyed_past->tore</li>
+        <li>destroyed_past->eviscerated</li>
+
+        <li>destroyed_present->sawing</li>
+        <li>destroyed_present->ripping</li>
+        <li>destroyed_present->halving</li>
+        <li>destroyed_present->tearing</li>
+        <li>destroyed_present->eviscerating</li>
+
+        <li>destroyed_suffix->into gory chunks</li>
+        <li>destroyed_suffix->messily</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->exposing its inner workings</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->slicing it in twain</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordCut_MeleeHit</defName>
+    <include>
+      <li>Maneuver_ChainSwordCut</li>
+      <li>Combat_Hit</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordCut_MeleeDeflect</defName>
+    <include>
+      <li>Maneuver_ChainSwordCut</li>
+      <li>Combat_Deflect</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordCut_MeleeMiss</defName>
+    <include>
+      <li>Maneuver_ChainSwordCut</li>
+      <li>Combat_Miss</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordCut_MeleeDodge</defName>
+    <include>
+      <li>Maneuver_ChainSwordCut</li>
+      <li>Combat_Dodge</li>
+    </include>
+  </RulePackDef>
+
+
+
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordStab</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_inf(p=4)->gore</li>
+        <li>damaged_inf->jab</li>
+        <li>damaged_inf(deflected!=True)->skewer</li>
+        <li>damaged_inf(deflected!=True)->impale</li>
+
+        <li>damaged_past(p=4)->gored</li>
+        <li>damaged_past->jabbed</li>
+        <li>damaged_past(deflected!=True)->skewered</li>
+        <li>damaged_past(deflected!=True)->impaled</li>
+
+        <li>damaged_present(deflected!=True)->impaling</li>
+        <li>damaged_present(deflected!=True)->puncturing</li>
+        <li>damaged_present(deflected!=True)->penetrating</li>
+        <li>damaged_present(deflected!=True)->skewering</li>
+
+        <li>woundname->hole</li>
+        <li>woundname->wound</li>
+        <li>woundname->crevice</li>
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->leaving a gaping [woundname]</li>
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->leaving a shredded [woundname]</li>
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->leaving a bleeding [woundname]</li>
+
+        <li>destroyed_past->impaled</li>
+        <li>destroyed_past->perforated</li>
+        <li>destroyed_past->skewered</li>
+
+        <li>destroyed_present->impaling</li>
+        <li>destroyed_present->perforating</li>
+        <li>destroyed_present->skewering</li>
+
+        <li>destroyed_suffix->straight through</li>
+        <li>destroyed_suffix->leaving a messy hole</li>
+        <li>destroyed_suffix(recipient_flesh!=Mechanoid,target_part_destroyed_count==1)->leaving it leaking gory fluids</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->leaving it leaking unrecognizable fluids</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordStab_MeleeHit</defName>
+    <include>
+      <li>Maneuver_Stab</li>
+      <li>Combat_Hit</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordStab_MeleeDeflect</defName>
+    <include>
+      <li>Maneuver_Stab</li>
+      <li>Combat_Deflect</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordStab_MeleeMiss</defName>
+    <include>
+      <li>Maneuver_Stab</li>
+      <li>Combat_Miss</li>
+    </include>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Maneuver_ChainSwordStab_MeleeDodge</defName>
+    <include>
+      <li>Maneuver_Stab</li>
+      <li>Combat_Dodge</li>
+    </include>
+  </RulePackDef>
+  
+</Defs>

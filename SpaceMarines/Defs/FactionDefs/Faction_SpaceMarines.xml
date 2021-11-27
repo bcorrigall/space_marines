@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef Name="SpaceMarineFactionBase" Abstract="True">
+    <goodwillDailyGain>0.20</goodwillDailyGain>
+    <goodwillDailyFall>0.20</goodwillDailyFall>
+  </FactionDef>
+
+  <FactionDef ParentName="SpaceMarineFactionBase" Name="SpaceMarineImperialFactionBase" Abstract="True">
+    <pawnSingular>space marine</pawnSingular>
+    <pawnsPlural>space marines</pawnsPlural>
+    <categoryTag>SpaceMarineBackstory</categoryTag>
+    <listOrderPriority>35</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>chapter master</leaderTitle>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+		  <li>SpaceMarineBackstory</li>
+		  <li>ScoutMarineBackstory</li>
+		  <li>TacticalMarineBackstory</li>
+		  <li>AssaultMarineBackstory</li>
+		  <li>TechMarineBackstory</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+    <allowedArrivalTemperatureRange>-60~80</allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Hyperweave</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <pawnGroupMakers>
+      <li>
+        <!-- Joint Marine Task-Force -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <TacticalMarineHeavy>1</TacticalMarineHeavy>
+          <TechMarine>2</TechMarine>
+          <TacticalMarine>5</TacticalMarine>
+          <AssaultMarine>3</AssaultMarine>
+          <TacticalDreadnought>1</TacticalDreadnought>
+          <ScoutMarineCloseRange>2</ScoutMarineCloseRange>
+          <ScoutMarineHeavy>1</ScoutMarineHeavy>
+          <ScoutMarineSniper>2</ScoutMarineSniper>
+          <ScoutMarine>1</ScoutMarine>
+          <ChapterMaster>0.05</ChapterMaster>
+        </options>
+      </li>
+      <li>
+        <!-- Tactical Marine Squad -->
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <TacticalMarine>8</TacticalMarine>
+          <TacticalMarineHeavy>2</TacticalMarineHeavy>
+          <TacticalDreadnought>0.5</TacticalDreadnought>
+        </options>
+      </li>
+      <li>
+        <!-- Scout Marine Squad -->
+        <kindDef>Combat</kindDef>
+        <commonality>45</commonality>
+        <options>
+          <ScoutMarine>3</ScoutMarine>
+          <ScoutMarineCloseRange>3</ScoutMarineCloseRange>
+          <ScoutMarineHeavy>2</ScoutMarineHeavy>
+          <ScoutMarineSniper>4</ScoutMarineSniper>
+        </options>
+      </li>
+      <li>
+        <!-- Assault Marine Squad -->
+        <kindDef>Combat</kindDef>
+        <commonality>40</commonality>
+        <options>
+          <AssaultMarine>10</AssaultMarine>
+        </options>
+      </li>
+      <li>
+        <!-- TechMarine Mission -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <TechMarine>6</TechMarine>
+          <TacticalMarine>3</TacticalMarine>
+          <AssaultMarine>3</AssaultMarine>
+          <ScoutMarineSniper>1</ScoutMarineSniper>
+        </options>
+      </li>
+      <li>
+        <!-- Terminator Attack -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <TacticalDreadnought>5</TacticalDreadnought>
+        </options>
+      </li>
+      <li>
+        <!-- ChapterMaster Attack -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <options>
+          <TacticalMarineHeavy>2</TacticalMarineHeavy>
+          <TechMarine>2</TechMarine>
+          <TacticalMarine>4</TacticalMarine>
+          <AssaultMarine>3</AssaultMarine>
+          <ScoutMarineCloseRange>1</ScoutMarineCloseRange>
+          <ScoutMarineHeavy>1</ScoutMarineHeavy>
+          <ScoutMarineSniper>2</ScoutMarineSniper>
+          <ScoutMarine>1</ScoutMarine>
+          <TacticalDreadnought>1.5</TacticalDreadnought>
+          <ChapterMaster>1</ChapterMaster>
+        </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <TacticalMarineHeavy>1</TacticalMarineHeavy>
+          <TechMarine>2</TechMarine>
+          <TacticalMarine>5</TacticalMarine>
+          <AssaultMarine>3</AssaultMarine>
+          <ScoutMarineCloseRange>2</ScoutMarineCloseRange>
+          <ScoutMarineHeavy>1</ScoutMarineHeavy>
+          <ScoutMarineSniper>2</ScoutMarineSniper>
+          <ScoutMarine>2</ScoutMarine>
+          <TacticalDreadnought>1.5</TacticalDreadnought>
+        </options>
+      </li>
+      <li>
+        <!-- Settlement -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <GarrisonScoutMarine>10</GarrisonScoutMarine>
+          <GarrisonAssaultMarine>6</GarrisonAssaultMarine>
+          <GarrisonTacticalMarine>10</GarrisonTacticalMarine>
+          <GarrisonTacticalDreadnought>2</GarrisonTacticalDreadnought>
+          <GarrisonChapterMaster>0.5</GarrisonChapterMaster>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+  </FactionDef>
+
+  <FactionDef ParentName="SpaceMarineImperialFactionBase">
+    <defName>SpaceMarinesCivil</defName>
+    <label>space marine chapters</label>
+    <description>The Space Marines are Mankind's greatest warriors. Genetically-enhanced to be the ultimate soldiers, they are far stronger and more resilient than ordinary human beings.\n\nEach Chapter is a self-sufficient army, equipped with its own spacecraft and capable of responding at a moment's notice to any threat to the security of Man. Every Chapter is fiercely proud of its history and achievements, and each one has its own distinctive colours and heraldic markings.\n\nThese chapters see the protection and guidance of normal humans as their greatest agenda.</description>
+    <factionIconPath>World/WorldObjects/Expanding/SpaceMarinesCivil</factionIconPath>
+    <startingGoodwill>0</startingGoodwill>
+    <naturalColonyGoodwill>-50~50</naturalColonyGoodwill>
+  </FactionDef>
+
+  <FactionDef ParentName="SpaceMarineImperialFactionBase">
+    <defName>SpaceMarinesRough</defName>
+    <label>hostile space marine chapters</label>
+    <description>The Space Marines are Mankind's greatest warriors. Genetically-enhanced to be the ultimate soldiers, they are far stronger and more resilient than ordinary human beings.\n\nEach Chapter is a self-sufficient army, equipped with its own spacecraft and capable of responding at a moment's notice to any threat to the security of Man. Every Chapter is fiercely proud of its history and achievements, and each one has its own distinctive colours and heraldic markings.\n\nThese chapters see normal humans as frail, weak creatures given to the follies of temptation, avarice, greed, lust and cowardice.</description>
+    <factionIconPath>World/WorldObjects/Expanding/SpaceMarinesHostile</factionIconPath>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(1000,  0)</li>
+        <li>(3000,  1)</li>
+        <li>(5000,  1.2)</li>
+        <li>(10000, 3.5)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <earliestRaidDays>45</earliestRaidDays>
+    <startingGoodwill>-80</startingGoodwill>
+    <naturalColonyGoodwill>-100~-80</naturalColonyGoodwill>
+  </FactionDef>
+</Defs>

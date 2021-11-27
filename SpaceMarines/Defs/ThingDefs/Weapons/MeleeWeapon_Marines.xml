@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseWeapon">
+    <defName>Marine_ChainSword</defName>
+    <label>chain sword</label>
+    <techLevel>Ultra</techLevel>
+    <description>The Chainsword is essentially a sword with powered teeth that run along a single-edged blade like that of a chainsaw.</description>
+    <soundInteract>Interact_ChainSword</soundInteract>
+    <meleeHitSound>MeleeHit_ChainSword</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/ChainSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+      <Plasteel>20</Plasteel>
+	  <Chemfuel>50</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineCaptain</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>sawtip</label>
+        <capacities>
+          <li>ChainSwordStab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1</cooldownTime>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+      <li>
+        <label>sawblade</label>
+        <capacities>
+          <li>ChainSwordCut</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>PowerFist</defName>
+    <label>power fist</label>
+    <techLevel>Ultra</techLevel>
+    <description>A warhammer with an embedded EMP capacitor. Upon impact, it blasts the target with an EMP burst in addition to the physical damage.</description>
+    <soundInteract>Interact_ZeusHammer</soundInteract>
+    <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/PowerFist</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+    <costList>
+	  <ComponentSpacer>8</ComponentSpacer>
+      <Plasteel>200</Plasteel>
+    </costList>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>Terminator</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>fist</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>3</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>14</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>Marine_Eviscerator</defName>
+    <label>eviscerator</label>
+    <techLevel>Ultra</techLevel>
+    <description>An eviscerator is a form of obscenely oversized chainsword, that is so abnormally large that it can only ever be wielded in combat effectively with both hands.</description>
+    <soundInteract>Interact_ChainSword</soundInteract>
+    <meleeHitSound>MeleeHit_ChainSword</meleeHitSound>
+    <equippedAngleOffset>-110</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Eviscerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+    <costList>
+      <Steel>250</Steel>
+	  <ComponentIndustrial>8</ComponentIndustrial>
+      <Plasteel>10</Plasteel>
+	  <Chemfuel>50</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>SpaceMarineHeavyMelee</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>sawtip</label>
+        <capacities>
+          <li>ChainSwordStab</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.5</cooldownTime>
+        <armorPenetration>0.76</armorPenetration>
+      </li>
+      <li>
+        <label>sawblade</label>
+        <capacities>
+          <li>ChainSwordCut</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.5</cooldownTime>
+        <armorPenetration>0.62</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseWeapon">
+    <defName>TechMarine_Poweraxe</defName>
+    <label>power axe</label>
+    <techLevel>Ultra</techLevel>
+    <description>The power axe uses an energy field to disrupt the matter where it strikes, making it suitable for taking down heavy opponents, cleaving through any amount of armour to get at the flesh beneath.</description>
+    <soundInteract>Interact_ZeusHammer</soundInteract>
+    <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/OmnissiahPowerAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+	  <ComponentSpacer>8</ComponentSpacer>
+      <Plasteel>200</Plasteel>
+    </costList>
+    <weaponTags>
+      <li>TechMarine</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>3</cooldownTime>
+        <armorPenetration>0.95</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+</Defs>

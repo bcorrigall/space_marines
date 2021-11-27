@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>		
+  <!--===================== Partial transformation mercenary childhoods =====================-->
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineMercenaryFailedTransformation1</defName>
+		<title>Failed Neophyte</title>
+		<titleShort>Neophyte</titleShort>
+		<baseDescription>[PAWN_nameDef] was a Space Marine neophyte whose training was cut short before [PAWN_pronoun] was given all [PAWN_possessive] implants after an... unfortunate series of events.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		  <li>PartialSpaceMarineMercenaryBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>40</chance>
+			</li>
+			<li>
+				<defName>Cannibal</defName>
+				<chance>20</chance>
+			</li>
+			<li>
+				<defName>Abrasive</defName>
+				<chance>20</chance>
+			</li>
+		</forcedTraits>
+		<disallowedTraits>
+			<li>
+				<defName>Kind</defName>
+				<chance>75</chance>
+			</li>
+		</disallowedTraits>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
+		<forcedHediffs>
+		  <li>GeneSeedSecondHeart</li>
+		  <li>GeneSeedIronHeart</li>
+		  <li>GeneSeedForgeOfStrength</li>
+		  <li>GeneSeedBloodMaker</li>
+		  <li>GeneSeedHealer</li>
+		  <li>GeneSeedUnsleeping</li>
+		  <li>GeneSeedNeutralizer</li>
+		  <li>GeneSeedRemembrancer</li>
+		  <li>GeneSeedMultiLung</li>
+		  <li>GeneSeedEyeOfVengeance</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>16</min>
+			<max>20</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>16</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineMercenaryFailedTransformation2</defName>
+		<title>Neophyte Survivor</title>
+		<titleShort>Neophyte</titleShort>
+		<baseDescription>[PAWN_nameDef] was a Space Marine neophyte whose chapter was completely overrun by mechanoids before [PAWN_pronoun] was given all [PAWN_possessive] implants.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		  <li>PartialSpaceMarineMercenaryBackstory</li>
+		</spawnCategories>
+		<linkedBackstory>
+			<li>SpaceMarineMercenaryGunForHire3</li>
+		</linkedBackstory>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		  </li>
+		</skillGains>
+		<forcedHediffs>
+		  <li>GeneSeedSecondHeart</li>
+		  <li>GeneSeedIronHeart</li>
+		  <li>GeneSeedForgeOfStrength</li>
+		  <li>GeneSeedBloodMaker</li>
+		  <li>GeneSeedHealer</li>
+		  <li>GeneSeedUnsleeping</li>
+		  <li>GeneSeedNeutralizer</li>
+		  <li>GeneSeedRemembrancer</li>
+		  <li>GeneSeedMultiLung</li>
+		  <li>GeneSeedEyeOfVengeance</li>
+		  <li>GeneSeedSentinelEar</li>
+		  <li>GeneSeedSentinelEar</li>
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>16</min>
+			<max>20</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>16</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	  <!--===================== Mercenary adulthoods =====================-->
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineMercenaryGunForHire1</defName>
+		<title>Space Marine Mercenary</title>
+		<titleShort>Space Marine</titleShort>
+		<baseDescription>After falling out with [PAWN_possessive] chapter, [PAWN_nameDef] used [PAWN_objective] extensive training to become a gun for hire.</baseDescription>
+		<spawnCategories>
+		  <li>PartialSpaceMarineMercenaryBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>8</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>25</min>
+			<max>200</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineMercenaryFighterForHire2</defName>
+		<title>Space Marine Mercenary</title>
+		<titleShort>Space Marine</titleShort>
+		<baseDescription>[PAWN_nameDef] was trained extensively as a Space Marine, and sold [PAWN_objective] skills to get by.</baseDescription>
+		<spawnCategories>
+		  <li>PartialSpaceMarineMercenaryBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>20</min>
+			<max>200</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>25</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>SpaceMarineMercenaryFighterForHire3</defName>
+		<title>Space Marine Mercenary</title>
+		<titleShort>Space Marine</titleShort>
+		<baseDescription>The utter destruction of his chapter left [PAWN_nameDef] a broken soul, and he wandered aimlessly for many years. Eventually a mercenary group found him, letting him once again do what he was best at.</baseDescription>
+		<spawnCategories>
+		  <li>PartialSpaceMarineMercenaryBackstory</li>
+		</spawnCategories>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>8</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		  </li>
+		</skillGains>
+		<bioAgeRange>
+			<min>100</min>
+			<max>1000</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>100</min>
+			<max>3000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+</Defs>	

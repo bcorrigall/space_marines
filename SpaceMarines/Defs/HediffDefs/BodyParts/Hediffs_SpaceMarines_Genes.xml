@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Base: Geneseed body part -->
+
+  <ThingDef Name="BodyPartGeneSeedBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>BodyPartsBionic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(189,169,118)</color>
+    </graphicData>
+    <tradeTags>
+      <li>Bionic</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li>GeneSeed</li>
+    </techHediffsTags>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Second Heart -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedSecondHeart</defName>
+    <label>second heart</label>
+    <labelNoun>a secondary heart</labelNoun>
+    <description>An implanted auxillary heart.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSecondHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedSecondHeart</spawnThingOnRemoved>
+    <stages>
+		<li>
+		<capMods>	
+			<li>
+			<capacity>BloodPumping</capacity>
+			<offset>0.5</offset>
+			</li>
+		</capMods>
+		</li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedSecondHeart</defName>
+    <label>second heart</label>
+    <description>A second heart, very effective in aiding the main heart to pump blood throughout the body.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedSecondHeart</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>4</MedicineUltratech>
+	  <Meat_Human>20</Meat_Human>
+	  <Heart>1</Heart>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedSecondHeart</defName>
+    <label>implant second heart</label>
+    <description>Implant an auxillary heart.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSecondHeart</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting second heart.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedSecondHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedSecondHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedSecondHeart</addsHediff>
+  </RecipeDef>
+
+
+
+  <!-- Ironheart -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedIronHeart</defName>
+    <label>ironheart</label>
+    <labelNoun>an ironheart implant</labelNoun>
+    <description>An implanted ironheart geneseed.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedIronHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedIronHeart</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statFactors>
+          <IncomingDamageFactor>0.85</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+		  <CarryingCapacity>25</CarryingCapacity>
+		  <SocialImpact>1.2</SocialImpact>
+        </statOffsets>
+      </li>
+   </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedIronHeart</defName>
+    <label>ironheart</label>
+    <description>This geneseed toughens up the entire skeletal structure, massively increasing bone density and causing the ribcage to fuse into one inpenetrable mass.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedIronHeart</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>4</MedicineUltratech>
+	  <Uranium>40</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SkinHardening</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedIronHeart</defName>
+    <label>implant ironheart geneseed</label>
+    <description>Implant an ironheart geneseed.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedIronHeart</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting ironheart geneseed.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedIronHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedIronHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ribcage</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedIronHeart</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>ArmorGland</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  
+  
+   <!-- Forge of Strength -->
+
+<HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedForgeOfStrength</defName>
+    <label>forge of strength</label>
+    <labelNoun>a forge of strength</labelNoun>
+    <description>A functioning Forge of Strength</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedForgeOfStrength</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedForgeOfStrength</spawnThingOnRemoved>
+    <stages>
+      <li>
+	    <painFactor>0.7</painFactor>
+        <capMods>
+		  <li>
+		    <capacity>Manipulation</capacity>
+            <postFactor>1.1</postFactor>
+          </li>
+        </capMods>
+		<statFactors>
+          <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+		  <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+		  <MoveSpeed>0.5</MoveSpeed>
+		  <MeleeHitChance>2</MeleeHitChance>
+		  <MeleeWeapon_CooldownMultiplier>-0.15</MeleeWeapon_CooldownMultiplier>
+		  <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+       </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedForgeOfStrength</defName>
+    <label>forge of strength</label>
+    <description>The presence of the Forge of Strength stimulates muscle growth throughout the body, greatly increasing the bearer's physical strength, combat ability, and survivability.</description>
+    <descriptionHyperlinks><RecipeDef>GeneSeedForgeOfStrength</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>12</MedicineUltratech>
+	  <Meat_Human>75</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SkinHardening</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>GeneSeedForgeOfStrength</defName>
+    <label>implant forge of strength</label>
+    <description>Implant a forge of strength.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedForgeOfStrength</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting a forge of strength.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedForgeOfStrength</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedForgeOfStrength</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>ChestCavity</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedForgeOfStrength</addsHediff>
+  </RecipeDef>
+  
+  
+  
+    <!-- Blood Maker -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedBloodMaker</defName>
+    <label>blood maker</label>
+    <labelNoun>a blood maker</labelNoun>
+    <description>An implanted Blood Maker.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedBloodMaker</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedBloodMaker</spawnThingOnRemoved>
+	<stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.50</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+		  <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+	  </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicImperialBase">
+    <defName>GeneSeedBloodMaker</defName>
+    <label>blood maker</label>
+    <description>Once implanted into a main blood vessel like the aorta, femoral artery or the vena cava, the Blood Maker alters the user's blood's biochemical composition to carry oxygen and nutrients more efficiently.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedBloodMaker</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+   <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>20</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MolecularAnalysis</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedBloodMaker</defName>
+    <label>implant blood maker</label>
+    <description>Implant a Blood Maker.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedBloodMaker</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting Mlood Maker.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedBloodMaker</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedBloodMaker</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedBloodMaker</addsHediff>
+  </RecipeDef>
+  
+  
+  
+   
+    <!-- Healer -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedHealer</defName>
+    <label>Healer</label>
+    <labelNoun>a healer</labelNoun>
+    <description>An implanted Healer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedHealer</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedHealer</spawnThingOnRemoved>
+    <stages>
+	  <li>
+	  	<makeImmuneTo>
+			<li>WoundInfection</li>
+		</makeImmuneTo>
+        <naturalHealingFactor>2</naturalHealingFactor>
+        <totalBleedFactor>0.4</totalBleedFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedHealer</defName>
+    <label>healer</label>
+    <description>This geneseed organ is placed within the chest cavity and manufactures synthetic biological cells which quickly and effectively quell blood loss and prevent infection.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedHealer</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+	  <MedicineUltratech>14</MedicineUltratech>
+	  <Meat_Human>35</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>HealingFactors</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedHealer</defName>
+    <label>install healer</label>
+    <description>Install a healer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedHealer</ThingDef></descriptionHyperlinks>
+    <jobString>Installing healer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedHealer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedHealer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>ChestCavity</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedHealer</addsHediff>
+  </RecipeDef>
+  
+  
+  
+  <!-- Unsleeping -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedUnsleeping</defName>
+    <label>unsleeping</label>
+    <labelNoun>an unsleeping node</labelNoun>
+    <description>An implanted unsleeping node.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedUnsleeping</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedUnsleeping</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <restFallFactorOffset>-0.3</restFallFactorOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedUnsleeping</defName>
+    <label>unsleeping node</label>
+    <description>This node is implanted into the back of the cerebrum, just above the brain stem, allowing the user to consciously "switch off" sections of the brain sequentially, while remaining awake and alert.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedUnsleeping</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>5</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>CircadianInfluence</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedUnsleeping</defName>
+    <label>implant unsleeping node</label>
+    <description>Implant an unsleeping node.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedUnsleeping</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting unsleeping node.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedUnsleeping</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedUnsleeping</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedUnsleeping</addsHediff>
+  </RecipeDef>
+  
+  
+ 
+    <!-- Neutralizer -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedNeutralizer</defName>
+    <label>neutralizer stomach</label>
+    <labelNoun>a neutralizer stomach</labelNoun>
+    <description>An implanted neutralizer stomach.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedNeutralizer</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedNeutralizer</spawnThingOnRemoved>
+    <stages>
+      <li>
+	    <statOffsets>
+            <ForagedNutritionPerDay>3</ForagedNutritionPerDay>
+        </statOffsets>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedNeutralizer</defName>
+    <label>neutralizer stomach</label>
+    <description>The neutralizer stomach is capable of biochemically analysing ingested materials and neutralizing most known biochemical and inorganic toxins.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedNeutralizer</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>10</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ArtificialMetabolism</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedNeutralizer</defName>
+    <label>implant neutralizer stomach</label>
+    <description>Implant a neutralizer stomach.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedNeutralizer</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting neutralizer stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedNeutralizer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedNeutralizer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedNeutralizer</addsHediff>
+  </RecipeDef>
+  
+  
+  
+    <!-- Remembrancer -->
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedRemembrancer</defName>
+    <label>remembrancer</label>
+    <labelNoun>a remembrancer</labelNoun>
+    <description>An implanted remembrancer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedRemembrancer</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedRemembrancer</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <GlobalLearningFactor>0.75</GlobalLearningFactor>
+          <ResearchSpeed>0.25</ResearchSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedRemembrancer</defName>
+    <label>remembrancer</label>
+    <description>The remembrancer allows the user to gain part of an individual person's or creature's memory by eating its flesh, allowing for much faster acquisition of skills.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedRemembrancer</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentSpacer>10</ComponentSpacer>
+	  <MedicineUltratech>8</MedicineUltratech>
+	  <Meat_Human>10</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>NeuralComputation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedRemembrancer</defName>
+    <label>implant remembrancer</label>
+    <description>Implant a remembrancer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedRemembrancer</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting remembrancer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedRemembrancer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedRemembrancer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedRemembrancer</addsHediff>
+  </RecipeDef>
+  
+  
+  
+      <!-- Multi-Lung -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedMultiLung</defName>
+    <label>multi-lung</label>
+    <labelNoun>a multi-lung</labelNoun>
+    <description>An implanted multi-lung.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedMultiLung</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedMultiLung</spawnThingOnRemoved>
+    <stages>
+	<li>
+        <capMods>
+		<li>
+            <capacity>Breathing</capacity>
+            <offset>0.50</offset>
+		</li>
+        </capMods>
+        <statOffsets>
+			<ToxicSensitivity>-0.4</ToxicSensitivity>
+        </statOffsets>
+    </li>
+	</stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedMultiLung</defName>
+    <label>multi-lung</label>
+    <description>The Multi-lung is a third lung implanted into the pulmonary and circulatory systems in the chest cavity that is able to absorb oxygen, and efficiently filter out toxins.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedMultiLung</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>10</Meat_Human>
+	  <Lung>1</Lung>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ArtificialMetabolism</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedMultiLung</defName>
+    <label>implant multi-lung</label>
+    <description>Implant a multi-lung.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedMultiLung</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting a multi-lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedMultiLung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedMultiLung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>ChestCavity</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedMultiLung</addsHediff>
+  </RecipeDef>
+  
+  
+  
+  
+    <!-- Eye of vengeance -->
+	
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedEyeOfVengeance</defName>
+    <label>eye of vengeance</label>
+    <labelNoun>an eye of vengeance</labelNoun>
+    <description>An implanted eye of vengeance.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedEyeOfVengeance</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedEyeOfVengeance</spawnThingOnRemoved>
+	<stages>
+	<li>
+        <capMods>
+		<li>
+            <capacity>Sight</capacity>
+            <offset>0.50</offset>
+		</li>
+        </capMods>
+		<statOffsets>
+			<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+			<MeleeHitChance>0.15</MeleeHitChance>
+			<AimingDelayFactor>-0.15</AimingDelayFactor>
+		</statOffsets>
+    </li>
+	</stages>
+	
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedEyeOfVengeance</defName>
+    <label>eye of vengeance</label>
+    <description>This implant sits at the base of the brain after being implanted along the optic nerve and connected to the retina, and provides hormonal and genetic stimuli, allowing for eyesight far superior to a normal human.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedEyeOfVengeance</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>8</MedicineUltratech>
+	  <Meat_Human>10</Meat_Human>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedEyeOfVengeance</defName>
+    <label>implant eye of vengeance</label>
+    <description>Install an eye of vengeance.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedEyeOfVengeance</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting eye of vengeance.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedEyeOfVengeance</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedEyeOfVengeance</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedEyeOfVengeance</addsHediff>
+  </RecipeDef>
+  
+  
+  
+      <!-- Sentinel Ear -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>GeneSeedSentinelEar</defName>
+    <label>sentinel ear</label>
+    <labelNoun>a sentinel ear</labelNoun>
+    <description>An implanted sentinel ear.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSentinelEar</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedSentinelEar</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.5</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+		  <MeleeHitChance>2</MeleeHitChance>
+		  <MeleeWeapon_CooldownMultiplier>-0.05</MeleeWeapon_CooldownMultiplier>
+        </statOffsets>
+       </li>
+    </stages>
+    <tags><li>SentinelEar</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedSentinelEar</defName>
+    <label>sentinel ear</label>
+    <description>Not only does this implant's improved inner ear structure make the user immune to dizziness or motion sickness but it also lets the user consciously filter out and greatly enhance certain sounds over the capabilities of normal human hearing.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedSentinelEar</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>4</MedicineUltratech>
+	  <Meat_Human>10</Meat_Human>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallGeneSeedPartBase">
+    <defName>InstallGeneSeedSentinelEar</defName>
+    <label>implant a sentinel ear</label>
+    <description>Implant a sentinel ear.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSentinelEar</ThingDef></descriptionHyperlinks>
+    <jobString>Installing sentinel ear.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedSentinelEar</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedSentinelEar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <incompatibleWithHediffTags>
+      <li>SentinelEar</li>
+    </incompatibleWithHediffTags>
+    <addsHediff>GeneSeedSentinelEar</addsHediff>
+  </RecipeDef>
+  
+  
+  
+  
+	<!-- Hibernator -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedHibernator</defName>
+    <label>hibernator membrane</label>
+    <labelNoun>a hibernator membrane</labelNoun>
+    <description>An implanted hibernator membrane.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedHibernator</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedHibernator</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+          <RestRateMultiplier>0.25</RestRateMultiplier>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedHibernator</defName>
+    <label>hibernator membrane</label>
+    <description>Initially implanted within the users's cranium, this membrane eventually merges with the recipient's cerebrum, allowing for the brain to enter a state of deep hibernation.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedHibernator</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+	  <MedicineUltratech>3</MedicineUltratech>
+	  <Meat_Human>5</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>CircadianInfluence</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedHibernator</defName>
+    <label>implant hibernator membrane</label>
+    <description>Implant a hibernator membrane.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedHibernator</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting hibernator membrane.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedHibernator</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedHibernator</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedHibernator</addsHediff>
+  </RecipeDef>
+  
+  
+  
+  
+  
+  <!-- Skinshield -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedSkinshield</defName>
+    <label>skinshield</label>
+    <labelNoun>a skinshield</labelNoun>
+    <description>An implanted skinshield.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSkinshield</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedSkinshield</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <Insulation_Heat>20</Insulation_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedSkinshield</defName>
+    <label>skinshield</label>
+    <description>This hormonal implant is attached to the human lymphatic system and controls the amount of melanin in a Space Marine's skin, protecting it from all sorts of harmful radiation.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedSkinshield</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+	  <MedicineUltratech>3</MedicineUltratech>
+	  <Meat_Human>15</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SkinHardening</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedSkinshield</defName>
+    <label>implant skinshield</label>
+    <description>Implant a skinshield.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedSkinshield</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting a skinshield.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedSkinshield</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedSkinshield</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedSkinshield</addsHediff>
+  </RecipeDef>
+
+
+  
+  <!-- Purifier -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedPurifier</defName>
+    <label>purifier</label>
+    <labelNoun>a purifier</labelNoun>
+    <description>An implanted purifier.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedPurifier</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedPurifier</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<capMods>
+			<li>
+			<capacity>BloodFiltration</capacity>
+			<offset>0.4</offset>
+			</li>
+		</capMods>
+        <statOffsets>
+		  <ToxicSensitivity>-0.15</ToxicSensitivity>
+        </statOffsets>
+		<makeImmuneTo>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+        </makeImmuneTo>
+      </li>
+	</stages>
+    <tags><li>Purifier</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedPurifier</defName>
+    <label>purifier</label>
+    <description>The purifier acts as a regulatory organ for the user's physiology, maintaining the efficient action of their circulatory system and the proper functioning of other organs, implanted or natural.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedPurifier</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>4</MedicineUltratech>
+	  <Meat_Human>15</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MolecularAnalysis</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedPurifier</defName>
+    <label>implant purifier</label>
+    <description>Implant a purifier.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedPurifier</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting purifier.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedPurifier</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedPurifier</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Kidney</li>
+    </appliedOnFixedBodyParts> 
+	<incompatibleWithHediffTags>
+      <li>Purifier</li>
+    </incompatibleWithHediffTags>
+    <addsHediff>GeneSeedPurifier</addsHediff>
+  </RecipeDef>
+
+
+
+
+
+  <!-- Devourerer -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedDevourerer</defName>
+    <label>devourer</label>
+    <labelNoun>a devourer</labelNoun>
+    <description>An implanted devourer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedDevourerer</ThingDef></descriptionHyperlinks>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CookSpeed>5</CookSpeed>
+        </statOffsets>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>GeneSeedDevourerer</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedDevourerer</defName>
+    <label>devourer</label>
+    <description>The organ also allows the user to identify extremely subtle odours with the same fidelity as the average canine bred for tracking, allowing them to even track their quarry by smell or taste alone.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedDevourerer</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>5</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+	  <MedicineUltratech>3</MedicineUltratech>
+	  <Meat_Human>5</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MolecularAnalysis</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedDevourerer</defName>
+    <label>implant devourer</label>
+    <description>Implant a devourer.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedDevourerer</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting a devourer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedDevourerer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedDevourerer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Nose</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedDevourerer</addsHediff>
+  </RecipeDef>
+
+
+  
+    <!-- Weaver -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedWeaver</defName>
+    <label>weaver</label>
+    <labelNoun>a weaver</labelNoun>
+    <description>An implanted weaver.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedWeaver</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedWeaver</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Heat>0.25</ArmorRating_Heat>
+		  <Insulation_Heat>5</Insulation_Heat>
+		  <Insulation_Cold>15</Insulation_Cold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedWeaver</defName>
+    <label>weaver</label>
+    <description>This organ is implanted within the central nervous system and responds to specific chemical stimuli in the environment, causing the user to secrete a waxy protein substance similar to mucus through the pores that seals their skin.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedWeaver</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>25</Meat_Human>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SkinHardening</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedWeaver</defName>
+    <label>implant a weaver</label>
+    <description>Implant a weaver.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedWeaver</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting a weaver.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedWeaver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedWeaver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedWeaver</addsHediff>
+  </RecipeDef>
+  
+  
+  <!-- Poison Bite -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedPoisonBite</defName>
+    <label>poison bite</label>
+    <labelNoun>a poisonous bite</labelNoun>
+    <description>An implanted betcher's gland.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedPoisonBite</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedPoisonBite</spawnThingOnRemoved>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>poison bite</label>
+            <capacities>
+              <li>ToxicBite</li>
+            </capacities>
+            <power>16</power>
+            <cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+          </li>
+        </tools>
+      </li>
+    </comps>
+	
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedPoisonBite</defName>
+    <label>betcher's gland</label>
+    <description>This gland works to transform the users saliva into a highly toxic material, allowing them to bite their enemies in combat to great effect.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedPoisonBite</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <MedicineUltratech>6</MedicineUltratech>
+	  <Meat_Human>5</Meat_Human>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedPoisonBite</defName>
+    <label>implant betcher's gland</label>
+    <description>Implant a betcher's gland.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedPoisonBite</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting betcher's gland.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedPoisonBite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedPoisonBite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedPoisonBite</addsHediff>
+  </RecipeDef>
+  
+      <!-- Black Carapace -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>GeneSeedBlackCarapace</defName>
+    <label>black carapace</label>
+    <labelNoun>black carapace</labelNoun>
+    <description>An implanted black carapace.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedBlackCarapace</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GeneSeedBlackCarapace</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>1.1</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.25</ArmorRating_Heat>
+          <PawnBeauty>-1</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartGeneSeedBase">
+    <defName>GeneSeedBlackCarapace</defName>
+    <label>black carapace</label>
+    <description>This neuroreactive, black organic fibrous material is implanted directly under the skin, increasing the power, durability, and speed of the user.</description>
+    <descriptionHyperlinks><RecipeDef>InstallGeneSeedBlackCarapace</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>40</Plasteel>
+      <ComponentSpacer>12</ComponentSpacer>
+	  <MedicineUltratech>8</MedicineUltratech>
+	  <Uranium>40</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SkinHardening</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantGeneSeed">
+    <defName>InstallGeneSeedBlackCarapace</defName>
+    <label>implant black carapace</label>
+    <description>Implant black carapace.</description>
+    <descriptionHyperlinks><ThingDef>GeneSeedBlackCarapace</ThingDef></descriptionHyperlinks>
+    <jobString>Implanting black carapace.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GeneSeedBlackCarapace</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GeneSeedBlackCarapace</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GeneSeedBlackCarapace</addsHediff>
+  </RecipeDef>
+  
+</Defs>

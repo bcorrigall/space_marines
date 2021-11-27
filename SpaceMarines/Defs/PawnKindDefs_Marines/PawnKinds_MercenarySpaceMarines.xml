@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="SpaceMarineMercenaryBase" Abstract="True">
+    <race>SpaceMarineRace</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Good</itemQuality>
+    <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+                <li>PartialSpaceMarineMercenaryBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+  
+  <PawnKindDef Abstract="True" Name="SpaceMarineMercenaryScout" ParentName="SpaceMarineMercenaryBase">
+    <combatPower>600</combatPower>
+    <maxGenerationAge>50</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+	  <li>Apparel_BasicShirt</li>
+      <li>ScoutMarinePowerArmour</li>
+      <li>Apparel_FlakPants</li>
+      <li>ScoutMarineGoggles</li>
+    </apparelRequired>
+    <weaponMoney>2000~5000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineLight</li>
+      <li>SpaceMarineHeavy</li>
+      <li>SpaceMarineLongRange</li>
+      <li>SpaceMarineStandard</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineHeavyMelee</li>
+	  <li>SpaceMarineHeavyExplosive</li>
+    </weaponTags>
+	<techHediffsChance>0.12</techHediffsChance>
+    <techHediffsMoney>500~1500</techHediffsMoney>
+	<techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+	<techHediffsRequired>
+    </techHediffsRequired>
+    <combatEnhancingDrugsChance>0.2</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>Brawler</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="SpaceMarineMercenaryScout">
+    <defName>SpaceMarineMercenaryScout</defName>
+    <label>scout marine mercenary</label>
+    <labelPlural>scout marine mercenaries</labelPlural>
+    <baseRecruitDifficulty>0.999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+  </PawnKindDef>
+  
+  
+    <PawnKindDef Abstract="True" Name="TechMarineMercenaryBase" ParentName="SpaceMarineMercenaryBase">
+    <combatPower>950</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>TechMarinePowerArmour</li>
+      <li>TechMarinePowerHelmet</li>
+    </apparelRequired>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>TechMarine</li>
+	  <li>SpaceMarineStandard</li>
+    </weaponTags>
+	<techHediffsChance>0.9</techHediffsChance>
+    <techHediffsMoney>10000~20000</techHediffsMoney>
+	<techHediffsTags>
+      <li>Advanced</li>
+      <li>BionicEye</li>
+      <li>BionicArm</li>
+      <li>BionicLeg</li>
+      <li>BionicSpine</li>
+      <li>BionicHeart</li>
+    </techHediffsTags>
+	<techHediffsRequired>
+      <li>ServoArm</li>
+    </techHediffsRequired>
+    <combatEnhancingDrugsChance>0.2</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="TechMarineMercenaryBase">
+    <defName>TechMarineMercenary</defName>
+    <label>space marine mercenary</label>
+    <labelPlural>space marine mercenaries</labelPlural>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+	<techHediffsChance>0.9</techHediffsChance>
+    <techHediffsMoney>25000~40000</techHediffsMoney>
+	<techHediffsTags>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </PawnKindDef>
+  
+  
+  <PawnKindDef Abstract="True" Name="EliteSpaceMarineMercenaryBase" ParentName="SpaceMarineMercenaryBase">
+    <combatPower>900</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>MarinePowerArmour</li>
+      <li>MarinePowerHelmet</li>
+    </apparelRequired>
+    <weaponMoney>2500~5000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineHeavy</li>
+      <li>SpaceMarineStandard</li>
+    </weaponTags>
+	<techHediffsChance>0.12</techHediffsChance>
+    <techHediffsMoney>500~1500</techHediffsMoney>
+	<techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+	<techHediffsRequired>
+    </techHediffsRequired>
+    <combatEnhancingDrugsChance>0.2</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="EliteSpaceMarineMercenaryBase">
+    <defName>SpaceMarineMercenary</defName>
+    <label>space marine mercenary</label>
+    <labelPlural>space marine mercenaries</labelPlural>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+  </PawnKindDef>
+</Defs>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/BodyDef[defName="Human"]/corePart/parts/li[def="Waist"]</xpath>
+			<value>
+				<li>
+					<def>ChestCavity</def>
+					<coverage>0.03</coverage>
+					<depth>Inside</depth>
+					<groups>
+					<li>Torso</li>
+					</groups>
+				</li>
+			</value>
+        </li>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/BodyDef[defName="Human"]/corePart/parts/li[def="Waist"]</xpath>
+			<value>
+				<li>
+					<def>SpinalPort1</def>
+					<coverage>0.00000000000000000000000001</coverage>
+					<depth>Inside</depth>
+					<groups>
+					<li>Torso</li>
+					</groups>
+				</li>
+			</value>
+        </li>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/BodyDef[defName="Human"]/corePart/parts/li[def="Waist"]</xpath>
+			<value>
+				<li>
+					<def>SpinalPort2</def>
+					<coverage>0.00000000000000000000000001</coverage>
+					<depth>Inside</depth>
+					<groups>
+					<li>Torso</li>
+					</groups>
+				</li>
+			</value>
+        </li>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/BodyDef[defName="Human"]/corePart/parts/li[def="Waist"]</xpath>
+			<value>
+				<li>
+					<def>SpinalPort3</def>
+					<coverage>0.00000000000000000000000001</coverage>
+					<depth>Inside</depth>
+					<groups>
+					<li>Torso</li>
+					</groups>
+				</li>
+			</value>
+        </li>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/BodyDef[defName="Human"]/corePart/parts/li[def="Waist"]</xpath>
+			<value>
+				<li>
+					<def>SpinalPort4</def>
+					<coverage>0.00000000000000000000000001</coverage>
+					<depth>Inside</depth>
+					<groups>
+					<li>Torso</li>
+					</groups>
+				</li>
+			</value>
+        </li>
+		</operations>
+	</Operation>
+</Patch>

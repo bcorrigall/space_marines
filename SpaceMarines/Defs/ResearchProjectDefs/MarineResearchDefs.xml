@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs> 
+  <ResearchProjectDef>
+    <defName>RocketPropelledMunitions</defName>
+    <label>rocket-propelled munitions</label>
+    <description>Craft rocket propelled munitions to launch explosives at your enemies.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+	<hiddenPrerequisites>
+      <li>GasOperation</li>
+    </hiddenPrerequisites>
+    <researchViewX>15.20</researchViewX>
+    <researchViewY>2.5</researchViewY>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <defName>MarinePowerArmour</defName>
+    <label>power armour</label>
+    <description>Build Spacemarine armor, turning any who wear it into walking tanks.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>PoweredArmor</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ComplexClothing</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>16.00</researchViewX>
+    <researchViewY>2.5</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

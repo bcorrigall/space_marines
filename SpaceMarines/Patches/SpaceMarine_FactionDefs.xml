@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Normal</success>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="Pirate"]/pawnGroupMakers</xpath>
+                <value>
+					  <li>
+						<!-- Normal fights, ranged with melee mix-ins and space marines -->
+						<kindDef>Combat</kindDef>
+						<commonality>50</commonality>
+						<options>
+						  <Drifter>8</Drifter>
+						  <Thrasher>3</Thrasher>
+						  <Scavenger>8</Scavenger>
+						  <Pirate>8</Pirate>
+						  <Grenadier_EMP>0.1</Grenadier_EMP>
+						  <Grenadier_Smoke>0.1</Grenadier_Smoke>
+						  <Grenadier_Destructive>1</Grenadier_Destructive>
+						  <Mercenary_Gunner>8</Mercenary_Gunner>
+						  <Mercenary_Heavy>4</Mercenary_Heavy>
+						  <Mercenary_Slasher>2</Mercenary_Slasher>
+						  <Mercenary_Sniper>5</Mercenary_Sniper>
+						  <Mercenary_Elite>6</Mercenary_Elite>
+						  <PirateBoss>2</PirateBoss>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+					  <li>
+						<!-- Normal fights, melee-only and space marines -->
+						<kindDef>Combat</kindDef>
+						<commonality>20</commonality>
+						<disallowedStrategies>
+						  <li>Siege</li>
+						</disallowedStrategies>
+						<options>
+						  <Thrasher>8</Thrasher>
+						  <Mercenary_Slasher>8</Mercenary_Slasher>
+						  <PirateBoss>4</PirateBoss>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+					  <li>
+					         <!-- Normal fights, ranged only and space marines -->
+						<kindDef>Combat</kindDef>
+						<commonality>25</commonality>
+						<options>
+						  <Scavenger>8</Scavenger>
+						  <Pirate>8</Pirate>
+						  <Grenadier_EMP>0.1</Grenadier_EMP>
+						  <Grenadier_Smoke>0.1</Grenadier_Smoke>
+						  <Grenadier_Destructive>2</Grenadier_Destructive>
+						  <Mercenary_Gunner>6</Mercenary_Gunner>
+						  <Mercenary_Heavy>5</Mercenary_Heavy>
+						  <Mercenary_Sniper>5</Mercenary_Sniper>
+						  <Mercenary_Elite>6</Mercenary_Elite>
+						  <PirateBoss>5</PirateBoss>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+					  <li>
+						<!-- Normal fights, explosives with ranged mix-ins and space marines -->
+						<kindDef>Combat</kindDef>
+						<commonality>15</commonality>
+						<disallowedStrategies>
+						  <li>Siege</li>
+						</disallowedStrategies>
+						<options>
+						  <Grenadier_EMP>0.5</Grenadier_EMP>
+						  <Grenadier_Smoke>0.5</Grenadier_Smoke>
+						  <Grenadier_Destructive>7</Grenadier_Destructive>
+						  <Mercenary_Gunner>1</Mercenary_Gunner>
+						  <Mercenary_Heavy>7</Mercenary_Heavy>
+						  <Mercenary_Elite>1</Mercenary_Elite>
+						  <PirateBoss>1</PirateBoss>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+					  <li>
+						<!-- Base defense, mainly ranged with melee mix-ins and space marines -->
+						<kindDef>Settlement</kindDef>
+						<options>
+						  <Thrasher>3</Thrasher>
+						  <Pirate>8</Pirate>
+						  <Grenadier_Destructive>2</Grenadier_Destructive>
+						  <Mercenary_Slasher>3</Mercenary_Slasher>
+						  <Mercenary_Sniper>8</Mercenary_Sniper>
+						  <Mercenary_Gunner>8</Mercenary_Gunner>
+						  <Mercenary_Elite>8</Mercenary_Elite>
+						  <PirateBoss>8</PirateBoss>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+					  <li>
+						<!-- Elite space marine attack group -->
+						<kindDef>Combat</kindDef>
+						<commonality>5</commonality>
+						<disallowedStrategies>
+						  <li>Siege</li>
+						</disallowedStrategies>
+						<options>
+						  <SpaceMarineMercenaryScout>0.5</SpaceMarineMercenaryScout>
+						  <TechMarineMercenary>0.15</TechMarineMercenary>						  
+						  <SpaceMarineMercenary>0.25</SpaceMarineMercenary>
+						</options>
+					  </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

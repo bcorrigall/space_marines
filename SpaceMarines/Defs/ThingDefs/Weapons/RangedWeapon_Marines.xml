@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+ <!-- ================================= Rocket-Propelled ==================================== -->
+ 
+  <!-- ==== Heavy Bolter ==== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Marine_HeavyBolter_Bolt</defName>
+    <label>bolter bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	 <drawSize>0.45</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>BolterBolt</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_HeavyBolter</defName>
+    <label>heavy bolter</label>
+    <description>The heavy bolter is the ultimate anti-infantry weapon, spewing out hails of high power bolts at it's target.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavyBolter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+		<comps>
+      <li> 
+	  <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+      </li>
+    </comps>
+    <uiIconScale>1.25</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.22</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.2</AccuracyMedium>
+      <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Uranium>80</Uranium>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>RocketPropelledMunitions</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>SpaceMarineHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Marine_HeavyBolter_Bolt</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>39.9</range>
+		<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>SpaceMarines_BolterShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+ 
+  <!-- ==== Bolter ==== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Marine_BolterGun_Bolt</defName>
+    <label>bolter bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	 <drawSize>0.45</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>BolterBolt</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_BolterGun</defName>
+    <label>bolter gun</label>
+    <description>A brutally efficient weapon, the Bolter fires mass-reactive bolts at its targets, each one a self-propelled missile which explodes with devastating effectiveness after penetrating its target.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BolterGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.4</AccuracyTouch>
+      <AccuracyShort>0.4</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Uranium>40</Uranium>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>RocketPropelledMunitions</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Marine_BolterGun_Bolt</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>31.9</range>
+		<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>SpaceMarines_BolterShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+ <!-- ==== BoltPistol ==== -->
+ 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BolterPistol</defName>
+    <label>bolt pistol bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.35</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>BolterBolt</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>75</speed>
+      <stoppingPower>1</stoppingPower>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_BolterPistol</defName>
+    <label>bolt pistol</label>
+    <description>The Bolt Pistol is a smaller handheld version of the Bolter, commonly used by space marines as their primary small arms weapon.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BolterPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+    <soundInteract>Interact_SMG</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>RocketPropelledMunitions</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>SpaceMarineLight</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.4</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.2</AccuracyMedium>
+      <AccuracyLong>0.1</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+	  <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>20</Plasteel>
+      <Uranium>15</Uranium>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BolterPistol</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>17.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>SpaceMarines_BolterShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- ==== BoltSniper ==== -->  
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Marine_BoltSniper_Bolt</defName>
+    <label>boltsniper bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>BolterBolt</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>5</stoppingPower>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_BoltSniper</defName>
+    <label>boltsniper</label>
+    <description>The long ranged Bolt Sniper fires extra large mass-reactive bolts at its targets, allowing for extreme penetration at long range.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BoltSniper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.5</drawSize>
+    </graphicData>
+		<comps>
+      <li> 
+	  <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+      </li>
+    </comps>
+    <uiIconScale>1.25</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.72</AccuracyLong>
+      <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+	  <ComponentSpacer>6</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Uranium>50</Uranium>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>RocketPropelledMunitions</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>SpaceMarineLongRange</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Marine_BoltSniper_Bolt</defaultProjectile>
+        <warmupTime>4.2</warmupTime>
+        <range>47.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>SpaceMarines_BolterShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+ <!-- ================================= Gas Propelled ==================================== -->
+  
+  <!-- ==== Assault Shotgun ==== -->  
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>SpaceMarineShotgunBullet</defName>
+    <label>assault shotgun blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <armorPenetrationBase>0.22</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_AssaultShotgun</defName>
+    <label>assault shotgun</label>
+    <description>The assault shotgun is a powerful weapon used primarily by space marines, capable of delivering a hail of deadly shot in a short time frame.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SpaceMarine_Assault_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <Uranium>75</Uranium>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SpaceMarineShotgunBullet</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>13.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SpaceMarineShotgun</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- ==== Assault Cannon ==== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_AssaultCannon</defName>
+    <label>assault cannon bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Marine_AssaultCannon</defName>
+    <label>assault cannon</label>
+    <description>Although it lacks the range and striking power of a bolter, the Assault Cannon sees widespread use on Space Marine terminators due to its extreme rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Assault_Cannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.4</drawSize>
+    </graphicData>
+		<comps>
+      <li> 
+	  <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+      </li>
+    </comps>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.2</AccuracyTouch>
+      <AccuracyShort>0.26</AccuracyShort>
+      <AccuracyMedium>0.12</AccuracyMedium>
+      <AccuracyLong>0.03</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>18</ComponentIndustrial>
+	  <ComponentSpacer>8</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>Terminator</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AssaultCannon</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>21.9</range>
+        <burstShotCount>44</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrels</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <!-- ================================= Explosive ==================================== -->
+
+  <!-- ==== Missile Launcher ==== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Missile_Marines</defName>
+    <label>missile</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+	 <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Marine_Missile</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>2</explosionRadius>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Marine_MissileLauncher</defName>
+    <label>missile launcher</label>
+    <description>Firing high explosive rounds, the missile launcher allows a steady barrage of heavy ordinance to be rained down on the enemy.</description>
+    <tickerType>Normal</tickerType>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MissileLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyShort>0.3</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+	  <Chemfuel>20</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>SpaceMarineHeavyExplosive</li>
+    </weaponTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Missile_Marines</defaultProjectile>
+        <warmupTime>4.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+        <range>31.9</range>
+        <forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Marine_Missile</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ================================= Plasma Weaponry ==================================== -->
+  
+  <!-- ==== Plasma Gun ==== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Plasma_Marines</defName>
+    <label>plasma</label>
+    <graphicData>
+      <texPath>Things/Projectile/PlasmaFire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Marine_Plasma</damageDef>
+      <explosionRadius>1.2</explosionRadius>
+      <damageAmountBase>30</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Marine_PlasmaGun</defName>
+    <label>plasma gun</label>
+    <description>Plasma Weapons make use of hydrogen fuel suspended in a liquid state to unleash the power of a small sun on your enemies.</description>
+    <tickerType>Normal</tickerType>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/PlasmaGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.52</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.52</AccuracyLong>
+      <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+	  <ComponentSpacer>12</ComponentSpacer>
+      <Plasteel>80</Plasteel>
+	  <Chemfuel>50</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>SpaceMarineHeavy</li>
+      <li>TechMarine</li>
+    </weaponTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Plasma_Marines</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+        <range>28.9</range>
+        <forcedMissRadius>0.0000000000000001</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4</explosiveRadius>
+        <explosiveDamageType>Marine_Plasma</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

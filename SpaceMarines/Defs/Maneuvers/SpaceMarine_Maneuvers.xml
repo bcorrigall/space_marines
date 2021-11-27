@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ManeuverDef>
+    <defName>ChainSwordCut</defName>
+    <requiredCapacity>ChainSwordCut</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>ChainSwordCut</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_ChainSwordCut_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_ChainSwordCut_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_ChainSwordCut_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_ChainSwordCut_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <ManeuverDef>
+    <defName>ChainSwordStab</defName>
+    <requiredCapacity>ChainSwordStab</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>ChainSwordStab</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_ChainSwordStab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_ChainSwordStab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_ChainSwordStab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_ChainSwordStab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+</Defs>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Name="SpaceMarineGeneSeedBase" ParentName="BodyPartBionicBase" Abstract="True">
+    <tradeTags>
+      <li>ImplantEmpireCommon</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li>ImplantEmpireCommon</li>
+	  <li>GeneSeedFull</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef Name="SurgeryInstallImplantGeneSeed" ParentName="SurgeryFlesh" Abstract="True">
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+      <li>SpaceMarineRace</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter><categories><li>Medicine</li></categories></filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef Name="SurgeryInstallGeneSeedPartBase" ParentName="SurgeryInstallImplantGeneSeed" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+  </RecipeDef>
+  
+  </Defs>

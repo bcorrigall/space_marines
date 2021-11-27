@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===================== Space Marine Base =====================-->
+
+  <PawnKindDef Name="SpaceMarineBase" Abstract="True">
+    <race>SpaceMarineRace</race>
+    <defaultFactionType>SpaceMarinesRough</defaultFactionType>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Good</itemQuality>
+    <backstoryCryptosleepCommonality>0.8</backstoryCryptosleepCommonality>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+  <!--===================== Defensive =====================-->
+  
+  <PawnKindDef ParentName="SpaceMarineScoutBase">
+    <defName>GarrisonScoutMarine</defName>
+    <combatPower>150</combatPower>
+    <label>scout marine</label>
+    <labelPlural>scout marines</labelPlural>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+      <li>SpaceMarineLongRange</li>
+      <li>SpaceMarineHeavy</li>
+      <li>SpaceMarineMelee</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>  
+  <PawnKindDef ParentName="AssaultMarineBase">
+    <defName>GarrisonAssaultMarine</defName>
+    <combatPower>200</combatPower>
+    <label>assault marine</label>
+    <labelPlural>assault marines</labelPlural>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineLight</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineHeavyMelee</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TacticalMarineBase">
+    <defName>GarrisonTacticalMarine</defName>
+    <combatPower>200</combatPower>
+    <label>tactical marine</label>
+    <labelPlural>tactical marines</labelPlural>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+      <li>SpaceMarineHeavy</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TacticalDreadnoughtBase">
+    <defName>GarrisonTacticalDreadnought</defName>
+    <combatPower>320</combatPower>
+    <label>terminator</label>
+    <labelPlural>terminators</labelPlural>
+    <weaponMoney>4000~10000</weaponMoney>
+    <weaponTags>
+      <li>Terminator</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  <PawnKindDef ParentName="ChapterMasterBase">
+    <defName>GarrisonChapterMaster</defName>
+    <combatPower>320</combatPower>
+    <label>chaptermaster</label>
+    <labelPlural>chaptermasters</labelPlural>
+    <weaponMoney>3000~10000</weaponMoney>
+    <itemQuality>Superior</itemQuality>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineHeavyMelee</li>
+      <li>TechMarine</li>
+    </weaponTags>
+    <baseRecruitDifficulty>1</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  
+  <!--===================== Scout Marine Base =====================-->
+  
+  <PawnKindDef Abstract="True" Name="SpaceMarineScoutBase" ParentName="SpaceMarineBase">
+    <combatPower>670</combatPower>
+    <maxGenerationAge>60</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelTags>
+      <li>ScoutMarine</li>
+    </apparelTags>
+    <apparelMoney>0~1400</apparelMoney>
+	<apparelRequired>
+	  <li>Apparel_BasicShirt</li>
+      <li>ScoutMarinePowerArmour</li>
+      <li>Apparel_FlakPants</li>
+    </apparelRequired>
+    <weaponMoney>3000~4000</weaponMoney>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>Brawler</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+  <!--===================== Standard Scout Marine =====================-->
+  
+  <PawnKindDef ParentName="SpaceMarineScoutBase">
+    <defName>ScoutMarine</defName>
+    <label>scout marine</label>
+    <labelPlural>scout marines</labelPlural>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  <!--===================== Heavy Scout Marine =====================-->
+  
+  <PawnKindDef ParentName="SpaceMarineScoutBase">
+    <defName>ScoutMarineHeavy</defName>
+    <label>heavy scout marine</label>
+    <labelPlural>heavy scout marines</labelPlural>
+    <weaponTags>
+      <li>SpaceMarineHeavy</li>
+	  <li>SpaceMarineHeavyExplosive</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.999999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+  </PawnKindDef>
+  
+  <!--===================== Close Range Scout Marine =====================-->
+  
+  <PawnKindDef ParentName="SpaceMarineScoutBase">
+    <defName>ScoutMarineCloseRange</defName>
+    <label>close combat scout marine</label>
+    <labelPlural>close combat scout marines</labelPlural>
+    <weaponTags>
+      <li>SpaceMarineShotgun</li>
+      <li>SpaceMarineHeavyMelee</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineLight</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  <!--===================== Sniper Scout Marine =====================-->
+  
+  <PawnKindDef ParentName="SpaceMarineScoutBase">
+    <defName>ScoutMarineSniper</defName>
+    <label>scout marine sniper</label>
+    <labelPlural>scout marine snipers</labelPlural>
+	<apparelRequired>
+      <li>ScoutMarineGoggles</li>
+    </apparelRequired>
+    <weaponTags>
+      <li>SpaceMarineLongRange</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+				<li>RangedScoutMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    <baseRecruitDifficulty>0.999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  <!--===================== TechMarine Base =====================-->
+  
+    <PawnKindDef Abstract="True" Name="TechMarineBase" ParentName="SpaceMarineBase">
+    <combatPower>850</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>TechMarinePowerArmour</li>
+      <li>TechMarinePowerHelmet</li>
+    </apparelRequired>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>TechMarine</li>
+	  <li>SpaceMarineStandard</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+  
+  <!--===================== TechMarine =====================-->
+ 
+  <PawnKindDef ParentName="TechMarineBase">
+    <defName>TechMarine</defName>
+    <label>techmarine</label>
+    <labelPlural>techmarines</labelPlural>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+	<techHediffsRequired>
+      <li>ServoArm</li>
+    </techHediffsRequired>
+  </PawnKindDef>
+  
+  <!--===================== Tactical Marine Base =====================-->
+  
+  <PawnKindDef Abstract="True" Name="TacticalMarineBase" ParentName="SpaceMarineBase">
+    <combatPower>750</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>MarinePowerArmour</li>
+      <li>MarinePowerHelmet</li>
+    </apparelRequired>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--===================== Tactical Marine =====================-->
+
+  <PawnKindDef ParentName="TacticalMarineBase">
+    <defName>TacticalMarine</defName>
+    <label>tactical marine</label>
+    <labelPlural>tactical marines</labelPlural>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  <!--===================== Heavy Tactical Marine =====================-->
+  
+  <PawnKindDef ParentName="TacticalMarineBase">
+    <defName>TacticalMarineHeavy</defName>
+    <label>devastator marine</label>
+    <labelPlural>heavy tactical marines</labelPlural>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineHeavy</li>
+	  <li>SpaceMarineHeavyExplosive</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+  </PawnKindDef>
+  
+  <!--===================== Assault Marine Base =====================-->
+  
+  <PawnKindDef Abstract="True" Name="AssaultMarineBase" ParentName="SpaceMarineBase">
+    <combatPower>750</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>MarinePowerArmour</li>
+      <li>MarinePowerHelmet</li>
+    </apparelRequired>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+  <!--===================== Assault Marine =====================-->
+  
+  <PawnKindDef ParentName="AssaultMarineBase">
+    <defName>AssaultMarine</defName>
+    <label>assault marine</label>
+    <labelPlural>assault marines</labelPlural>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>SpaceMarineLight</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineHeavyMelee</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  <!--===================== Terminator Base =====================-->
+    
+ <PawnKindDef Abstract="True" Name="TacticalDreadnoughtBase" ParentName="SpaceMarineBase">
+    <combatPower>1250</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>TacticalDreadnoughtArmour</li>
+      <li>TacticalDreadnoughtHelmet</li>
+    </apparelRequired>
+    <factionLeader>true</factionLeader>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+	
+  <!--===================== Terminator =====================-->
+	
+  <PawnKindDef ParentName="TacticalDreadnoughtBase">
+    <defName>TacticalDreadnought</defName>
+    <label>terminator</label>
+    <labelPlural>terminators</labelPlural>
+    <weaponMoney>4000~10000</weaponMoney>
+    <weaponTags>
+      <li>Terminator</li>
+    </weaponTags>
+    <baseRecruitDifficulty>0.99999999999999999999999</baseRecruitDifficulty>
+  </PawnKindDef>
+	
+  <!--===================== ChapterMaster Base =====================-->
+  
+  <PawnKindDef Abstract="True" Name="ChapterMasterBase" ParentName="SpaceMarineBase">
+    <combatPower>1050</combatPower>
+    <maxGenerationAge>1000</maxGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<apparelRequired>
+      <li>ChapterMasterPowerArmour</li>
+      <li>ChapterMasterPowerHelmet</li>
+    </apparelRequired>
+    <factionLeader>true</factionLeader>
+	<disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!--===================== ChapterMaster =====================-->
+
+  <PawnKindDef ParentName="ChapterMasterBase">
+    <defName>ChapterMaster</defName>
+    <label>chaptermaster</label>
+    <labelPlural>chaptermasters</labelPlural>
+    <weaponMoney>3000~10000</weaponMoney>
+    <itemQuality>Superior</itemQuality>
+    <weaponTags>
+      <li>SpaceMarineStandard</li>
+      <li>SpaceMarineMelee</li>
+      <li>SpaceMarineHeavyMelee</li>
+      <li>TechMarine</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+				<li>SpaceMarineBackstory</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    <baseRecruitDifficulty>1</baseRecruitDifficulty>
+  </PawnKindDef>
+  
+  
+  
+</Defs>

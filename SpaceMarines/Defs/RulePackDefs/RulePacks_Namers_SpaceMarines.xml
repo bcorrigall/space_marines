@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerSpaceMarineUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>MarineFirst->NameBanks/Names_First_SpaceMarine</li>
+        <li>MarineLast->NameBanks/Names_Last_SpaceMarine</li>
+        <li>MarineSyl->NameBanks/Names_Syllable_SpaceMarine</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerSpaceMarine</defName>
+    <include>
+      <li>NamerSpaceMarineUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=12)->[MarineFirst] [MarineLast]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

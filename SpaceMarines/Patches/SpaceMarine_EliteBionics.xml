@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <success>Always</success>
+    <mods>
+    <li>Elite Bionics Framework</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/HediffDef[defName="GeneSeedSecondHeart"]</xpath>
+          <value>
+            <comps>
+              <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+                <linearAdjustment>10</linearAdjustment>
+              </li>
+            </comps>
+			    </value>
+					<success>Always</success>
+		    </li>
+			
+		  <li Class="PatchOperationAdd">
+          <xpath>/Defs/HediffDef[defName="GeneSeedBlackCarapace"]</xpath>
+          <value>
+            <comps>
+              <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+                <linearAdjustment>15</linearAdjustment>
+              </li>
+            </comps>
+			    </value>
+					<success>Always</success>
+		    </li>
+			
+			
+		  <li Class="PatchOperationAdd">
+          <xpath>/Defs/HediffDef[defName="GeneSeedForgeOfStrength"]</xpath>
+          <value>
+            <comps>
+              <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+                <linearAdjustment>10</linearAdjustment>
+              </li>
+            </comps>
+			    </value>
+					<success>Always</success>
+		    </li>
+			
+			
+		  <li Class="PatchOperationAdd">
+          <xpath>/Defs/HediffDef[defName="GeneSeedIronHeart"]</xpath>
+          <value>
+            <comps>
+              <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+                <linearAdjustment>15</linearAdjustment>
+              </li>
+            </comps>
+			    </value>
+					<success>Always</success>
+		    </li>
+			
+      </operations>
+    </match>
+  </Operation>
+</Patch>

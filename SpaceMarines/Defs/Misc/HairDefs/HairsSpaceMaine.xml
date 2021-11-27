@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HairDef>
+    <defName>SpaceMarineBriefPonytail</defName>
+    <label>brief ponytail</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Gaston</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineScatman</defName>
+    <label>scatman</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Scat</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineAfro</defName>
+    <label>afro</label>
+    <hairGender>Any</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Afro</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+ <HairDef>
+    <defName>SpaceMarineMop</defName>
+    <label>mop</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Mop</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineWavy</defName>
+    <label>wavy</label>
+    <hairGender>Any</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Wavy</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineMessy</defName>
+    <label>messy</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Mess</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineRecruit</defName>
+    <label>recruit</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Recruit</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineJunkie</defName>
+    <label>junkie</label>
+    <hairGender>FemaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Junkie</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineRandy</defName>
+    <label>randy</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Randy</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineRookie</defName>
+    <label>rookie</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Rookie</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+  
+  <HairDef>
+    <defName>SpaceMarineShaveTopBraid</defName>
+    <label>shave top braid</label>
+    <hairGender>Any</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/ShaveTopBraid</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineBraidedKnot</defName>
+    <label>braided knot</label>
+    <hairGender>Any</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Braidbun</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarinePrimal</defName>
+    <label>primal</label>
+    <hairGender>FemaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Primal</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineElder</defName>
+    <label>elder</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Elder</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineLocks</defName>
+    <label>locks</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Locks</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineSavage</defName>
+    <label>savage</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Savage</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineShaved</defName>
+    <label>shaved</label>
+    <hairGender>MaleUsually</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Shaved</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+    <HairDef>
+    <defName>SpaceMarineScorpionTail</defName>
+    <label>scorpion tail</label>
+    <hairGender>Any</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Scorpiontail</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+
+  <HairDef>
+    <defName>SpaceMarineTopdog</defName>
+    <label>topdog</label>
+    <hairGender>Male</hairGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/Topdog</texPath>
+    <hairTags>
+      <li>SpaceMarine</li>
+    </hairTags>
+  </HairDef>
+</Defs>
